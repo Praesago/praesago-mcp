@@ -1,0 +1,38 @@
+[build-system]
+requires = ["hatchling>=1.24"]
+build-backend = "hatchling.build"
+
+[project]
+name = "praesago-mcp"
+dynamic = ["version"]
+description = "Local (stdio) MCP server for Praesago: England and Wales property and area data for Claude, Cursor and other MCP clients."
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+requires-python = ">=3.10"
+authors = [{ name = "Praesago" }]
+keywords = ["mcp", "model-context-protocol", "property", "real-estate", "england", "wales", "postcode", "house-prices"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Operating System :: OS Independent",
+  "Intended Audience :: Developers",
+  "Topic :: Scientific/Engineering :: Information Analysis",
+]
+dependencies = []
+
+[project.scripts]
+praesago-mcp = "praesago_mcp.bridge:main"
+
+[project.urls]
+Homepage = "https://praesago.com"
+Documentation = "https://praesago.com/docs/mcp"
+Source = "https://github.com/Praesago/praesago-mcp"
+
+[tool.hatch.version]
+path = "src/praesago_mcp/__init__.py"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/praesago_mcp"]
+
+[tool.pytest.ini_options]
+markers = ["live: calls the real server (set PRAESAGO_LIVE=1)"]

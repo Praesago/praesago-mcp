@@ -1,0 +1,11 @@
+# Weekly checks for the build tool (pip) and the GitHub Actions used in ci.yml and publish.yml.
+version: 2
+updates:
+  - package-ecosystem: "pip"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"

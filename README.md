@@ -57,6 +57,10 @@ Example questions:
 England and Wales only. Scotland and Northern Ireland are not covered. Every figure comes from a named source and carries its date
 or year. There are no forecasts and no valuations of single homes.
 
+## Monthly email
+
+Monthly email for builders (what moved in the England and Wales property market, which official data was updated, one API call to try): <https://praesago.com/newsletter>
+
 ## Settings
 
 | Variable | Meaning |
